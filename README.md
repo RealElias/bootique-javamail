@@ -1,2 +1,2 @@
-# Bootique SMTP Client
-Provides SMTP Client integration with [Bootique](http://bootique.io)
+# Bootique Java Mail
+Provides Java Mail integration with [Bootique](http://bootique.io)
