@@ -20,6 +20,7 @@
 
     <modules>
         <module>bootique-javamail</module>
+        <module>bootique-javamail-test</module>
     </modules>
 
     <properties>
