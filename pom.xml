@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.bootique.modules.parent</groupId>
+        <artifactId>bootique-modules-parent</artifactId>
+        <version>0.13</version>
+    </parent>
+
+    <groupId>io.bootique.javamail</groupId>
+    <artifactId>bootique-javamail-parent</artifactId>
+    <version>1.0.RC1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>bootique-javamail-parent: Parent of Java Mail Bootique integration</name>
+    <description>
+        Parent POM of Bootique Java Mail module.
+    </description>
+
+    <modules>
+        <module>bootique-javamail</module>
+    </modules>
+
+    <properties>
+        <bootique-version>${project.version}</bootique-version>
+        <mail-version>1.6.2</mail-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.bootique</groupId>
+                <artifactId>bootique</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.bootique</groupId>
+                <artifactId>bootique-test</artifactId>
+                <version>${bootique-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>${mail-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Optional profile used to sign artifacts -->
+    <profiles>
+        <profile>
+            <id>gpg</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
