@@ -45,6 +45,7 @@ mail:
 |`authenticator`
 |none
 |
+|===
 
 === mail.authenticator
 
