@@ -1,0 +1,65 @@
+= Bootique Java Mail Documentation
+:bootique_snapshot_version: 1.0.RC1-SNAPSHOT
+:toc:
+
+== Bootique Integration with Java Mail
+
+[source,xml]
+----
+<dependency>
+    <groupId>io.bootique.javamail</groupId>
+    <artifactId>bootique-javamail</artifactId>
+</dependency>
+----
+
+== Configuration Reference
+
+=== mail
+
+[source,yaml]
+----
+mail:
+  host: localhost
+  port: 25
+  authenticator:
+    username: usrnme
+    password: psswrd
+----
+"mail" is a root element of the Java Mail configuration and is bound to a https://github.com/RealElias/bootique-javamail/blob/master/bootique-javamail/src/main/java/io/bootique/mail/MailFactory.java[`MailFactory`] object. It supports the following properties:
+
+."mail" Element Property Reference
+[cols=3*,options=header]
+|===
+|Property
+|Default
+|Description
+
+|`host`
+|none
+|
+
+|`port`
+|25
+|
+
+|`authenticator`
+|none
+|
+
+=== mail.authenticator
+
+."authenticator" Element Property Reference
+[cols=3*,options=header]
+|===
+|Property
+|Default
+|Description
+
+|`username`
+|none
+|
+
+|`password`
+|none
+|
+|===

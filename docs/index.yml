@@ -1,0 +1,7 @@
+docs:
+- file: index.adoc
+  name: bootique-javamail-docs
+  meta:
+    title: Bootique Integration with Java Mail
+    keywords: bootique, email
+    description: Bootique Java Mail Module Documentation
